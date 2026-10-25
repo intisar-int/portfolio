@@ -3,13 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta property="og:title" content="Intisar Ahmad — EEE Engineer">
-<meta property="og:description" content="Portfolio of Intisar Ahmad, final-year EEE (Electronics) student at BRAC University, teacher and founder in Dhaka.">
 <meta name="theme-color" content="#070707">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Intisar Ahmad · EEE Engineer">
+<meta property="og:description" content="Final-year EEE (Electronics) student at BRAC University, Dhaka. FPGA, RISC-V and robotics projects.">
+<meta property="og:image" content="og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Intisar Ahmad, EEE Engineer, Dhaka">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="og.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Crect width='10' height='10' fill='%23070707'/%3E%3Cpath d='M5 1.5 9 8.5H7L5 4.6 3 8.5H1Z' fill='%23e2475c'/%3E%3C/svg%3E">
-<title>INTISAR.AHMAD</title>
+<title>Intisar Ahmad · EEE Engineer</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Portfolio of Intisar Ahmad — final-year EEE (Electronics) student at BRAC University, teacher and founder, based in Dhaka, Bangladesh.">
+<meta name="description" content="Intisar Ahmad, final-year EEE (Electronics) student at BRAC University in Dhaka. FPGA, RISC-V and robotics projects, 7 years teaching, founder of Wallchemy.">
+<meta name="author" content="Intisar Ahmad">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Intisar Ahmad","jobTitle":"EEE Engineer","description":"Final-year Electrical and Electronic Engineering student, Electronics major","alumniOf":{"@type":"CollegeOrUniversity","name":"BRAC University"},"address":{"@type":"PostalAddress","addressLocality":"Dhaka","addressCountry":"BD"},"knowsAbout":["FPGA","VHDL","RISC-V","Digital design","Embedded systems","Robotics"],"sameAs":["https://github.com/intisar-int","https://www.linkedin.com/in/intisar-ahmad-eee","https://facebook.com/Intisaaaaaaaar"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap">
@@ -51,14 +60,14 @@ body.on-lime .gridlines span{border-color:rgba(255,255,255,.08)}
 
 /* ---------- HUD header ---------- */
 .hud{position:fixed;top:0;left:0;right:0;z-index:50;padding-top:calc(env(safe-area-inset-top,0px) + 14px);padding-bottom:14px;padding-left:var(--gut);padding-right:var(--gutr);display:grid;grid-template-columns:repeat(5,1fr);align-items:start;gap:0;transition:color .4s}
-.hud .logo{display:flex;align-items:center;gap:8px;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em}
+.hud .logo{display:flex;align-items:center;gap:8px;min-height:44px;margin-top:-12px;width:max-content;font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em}
 .hud .logo svg{width:11px;height:11px}
 .hud .logo svg path{fill:var(--hi);transition:fill .4s}
-.hud .sound{justify-self:start;padding:6px 8px;margin:-6px 0 0 -4px}
+.hud .sound{justify-self:start;min-height:44px;padding:0 8px;margin:-14px 0 0 -4px}
 .hud .sound b{color:var(--cream);font-weight:500;transition:color .4s}
 .hud .sound span{color:var(--muted)}
 .hud .place,.hud .coord{color:var(--muted);line-height:1.5;padding-left:4px}
-.hud .menu-btn{justify-self:end;background:#1f2121;border:1px solid #39402e;color:var(--cream);font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em;padding:7px 18px;clip-path:polygon(0 0,100% 0,100% 70%,88% 100%,0 100%);transition:background .25s,color .25s}
+.hud .menu-btn{justify-self:end;background:#1f2121;border:1px solid #39402e;color:var(--cream);font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.06em;padding:7px 18px;min-height:44px;margin-top:-6px;clip-path:polygon(0 0,100% 0,100% 70%,88% 100%,0 100%);transition:background .25s,color .25s}
 .hud .menu-btn:hover{background:var(--lime);color:var(--cream)}
 body.on-lime .hud{color:var(--cream)}
 body.on-lime .hud .logo svg path{fill:var(--purple)}
@@ -80,11 +89,11 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
 #menu .big a{font-family:var(--display);font-weight:500;font-size:44px;line-height:1;letter-spacing:-.01em;width:max-content;padding:2px 6px;transition:background .2s,color .2s}
 #menu .big a:hover{background:var(--cream);color:var(--ink)}
 #menu .conn{display:grid;grid-template-columns:1fr 1fr;gap:12px 20px}
-#menu .conn a{display:flex;justify-content:space-between;gap:8px;color:var(--muted)}
-#menu .conn a i{font-style:normal;color:#4a4d57;margin-right:8px}
+#menu .conn a,#menu .conn button{display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--muted);min-height:44px;text-align:left}
+#menu .conn a i,#menu .conn button i{font-style:normal;color:#80838f;margin-right:8px}
 #menu .conn a em{font-style:normal;color:var(--hi)}
 #menu .conn a:hover{color:var(--cream)}
-#menu .foot{border-top:1px solid #2c2f27;padding-top:14px;color:#4a4d57}
+#menu .foot{border-top:1px solid #2c2f27;padding-top:14px;color:#80838f}
 .scrim{position:fixed;inset:0;z-index:70;background:rgba(0,0,0,.55);backdrop-filter:blur(2px);transition:opacity .35s}
 .scrim[hidden]{display:block!important;opacity:0;pointer-events:none}
 
@@ -107,7 +116,7 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
 .hero .side-l{position:absolute;left:var(--gut);bottom:calc(5vh + min(10.4vw,166px));color:var(--muted)}
 .hero .side-m{position:absolute;left:40%;bottom:4.5vh;color:var(--muted)}
 .hero .year{position:absolute;left:59%;bottom:4vh;font-family:var(--display);font-weight:500;font-size:34px;line-height:1}
-.hero .year small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;color:var(--muted)}
+.hero .year small{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted)}
 .hero .scroll{position:absolute;right:calc(var(--gutr) + 4px);bottom:4vh;writing-mode:vertical-rl;color:var(--muted)}
 .intro{transition:opacity .2s linear}
 .manifesto{position:absolute;left:var(--gut);bottom:5vh;width:min(560px,42vw);margin:0;font-family:var(--display);font-weight:500;font-size:clamp(26px,3.5vw,52px);line-height:.98;text-transform:uppercase;text-align:justify;text-align-last:justify}
@@ -155,7 +164,8 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
 .proj .meta{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:12px}
 .proj h3{margin:0;font-family:var(--display);font-weight:600;font-size:clamp(17px,1.5vw,22px);text-transform:uppercase;line-height:1.05}
 .proj p{margin:6px 0 0;font-size:13px;color:#ecc9ce;max-width:44ch}
-.proj .visit{flex:none}
+.proj .visit{flex:none;display:inline-flex;align-items:center;min-height:44px;padding:0 10px;margin:-12px -10px}
+.proj .later{flex:none;color:var(--rose);opacity:.85}
 .proj .visit:hover{text-decoration:underline}
 .proj:hover .shot{outline-color:var(--cream)}
 .work-progress{position:absolute;left:var(--gut);right:var(--gutr);bottom:calc(env(safe-area-inset-bottom,0px) + 18px);height:2px;background:rgba(255,255,255,.15)}
@@ -168,7 +178,7 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
 .console{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.2fr) minmax(0,1fr);gap:clamp(16px,4vw,70px);align-items:start}
 .jobs{display:grid;gap:10px;list-style:none;margin:0;padding:0}
 .job{width:100%;text-align:left;display:grid;grid-template-columns:28px 1fr;gap:4px 8px;align-items:baseline;padding:12px 14px;border:1px solid #25272f;background:#0b0c0d;clip-path:polygon(0 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%);transition:background .2s,color .2s}
-.job .n{color:#4a4d57;grid-row:span 2}
+.job .n{color:#80838f;grid-row:span 2}
 .job b{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.02em;text-transform:uppercase;line-height:1.1}
 .job .r{color:var(--muted);grid-column:2}
 .job:hover{border-color:#3b3f2c}
@@ -193,6 +203,7 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
 .links{padding-block:44px;padding-left:clamp(16px,6vw,110px);display:grid;grid-template-columns:auto 1fr 1fr;gap:14px 30px;align-content:center}
 .links .k{color:#e9b8bf}
 .links a,.links .v{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.links a{display:inline-flex;align-items:center;min-height:44px;margin-block:-12px}
 .links a:hover{text-decoration:underline}
 .links .v{user-select:all}
 #wordmark{display:block;width:100%;height:clamp(110px,17vw,260px)}
@@ -235,7 +246,7 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
 
 <header class="hud mono">
   <a class="logo" href="#top" data-snd><svg viewBox="0 0 10 10" aria-hidden="true"><path d="M5 0 10 10H7.4L5 5 2.6 10H0Z"/></svg>INTISAR AHMAD</a>
-  <button class="sound mono" id="soundBtn" type="button" aria-pressed="true"><span>Sound · </span><b id="soundState">On</b></button>
+  <button class="sound mono" id="soundBtn" type="button" aria-pressed="false" aria-label="Sound"><span>Sound · </span><b id="soundState">Off</b></button>
   <div class="place">Dhaka, BD<br><span id="clock">--:--</span></div>
   <div class="coord">23°46'21.5"N<br>90°25'30.4"E</div>
   <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" data-snd>MENU</button>
@@ -275,7 +286,7 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
         <div class="side-m mono">Of classes 6 to 10, since 2019</div>
         <div class="year"><small>Class of</small>27'</div>
       </div>
-      <h1 class="name" id="heroName"><span>Intisar</span><span>Ahmad</span></h1>
+      <h1 class="name" id="heroName"><span>Intisar</span> <span>Ahmad</span></h1>
       <p class="manifesto" id="manifesto" aria-label="I like learning how things work, building things with what I learn, and occasionally learning why they don't. Some lessons just happen to come with a little smoke.">I like learning how things work, building things with what I learn, and occasionally learning why they don't. Some lessons just happen to come with <span class="q">a little smoke.</span></p>
       <div class="scroll mono">Scroll down ↓↓</div>
       <canvas id="pixels" aria-hidden="true"></canvas>
@@ -286,19 +297,19 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
   <section class="lime stats" id="stats" aria-label="At a glance">
     <div class="cell"><div class="card"><span class="lbl">Years teaching</span><span class="num" data-odo="7">07</span></div></div>
     <div class="cell e"></div>
-    <div class="cell"><div class="card" data-snd><span class="lbl">VHDL / FPGA</span><canvas data-dots="</>"></canvas></div></div>
+    <div class="cell"><div class="card" data-snd><span class="lbl">VHDL / FPGA</span><canvas data-dots="</>" aria-hidden="true"></canvas></div></div>
     <div class="cell e"></div>
-    <div class="cell"><div class="card" data-snd><span class="lbl">MATLAB</span><canvas data-dots="ƒ(x)"></canvas></div></div>
+    <div class="cell"><div class="card" data-snd><span class="lbl">MATLAB</span><canvas data-dots="ƒ(x)" aria-hidden="true"></canvas></div></div>
     <div class="cell e"></div>
     <div class="cell"><div class="card"><span class="lbl">Projects built</span><span class="num" data-odo="9">09</span></div></div>
     <div class="cell e"></div>
-    <div class="cell"><div class="card" data-snd><span class="lbl">Flutter</span><canvas data-dots="APP"></canvas></div></div>
+    <div class="cell"><div class="card" data-snd><span class="lbl">Flutter</span><canvas data-dots="APP" aria-hidden="true"></canvas></div></div>
     <div class="cell e"></div>
     <div class="cell"><canvas class="tri" id="tri" aria-hidden="true"></canvas></div>
     <div class="cell e"></div>
     <div class="cell"><div class="card"><span class="lbl">Roles held</span><span class="num" data-odo="6">06</span></div></div>
     <div class="cell e"></div>
-    <div class="cell"><div class="card" data-snd><span class="lbl">ESP32 · LoRa</span><canvas data-dots="((•))"></canvas></div></div>
+    <div class="cell"><div class="card" data-snd><span class="lbl">ESP32 · LoRa</span><canvas data-dots="((•))" aria-hidden="true"></canvas></div></div>
   </section>
 
   <!-- WORK (horizontal) -->
@@ -385,7 +396,7 @@ const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
 
 /* ======== SOUND ======== */
-const Snd={on:true,ctx:null,hum:null,
+const Snd={on:false,ctx:null,hum:null,
   init(){if(this.ctx||!this.on)return;try{const C=window.AudioContext||window.webkitAudioContext;this.ctx=new C();
     const o=this.ctx.createOscillator(),o2=this.ctx.createOscillator(),f=this.ctx.createBiquadFilter(),g=this.ctx.createGain();
     o.type='sawtooth';o.frequency.value=55;o2.type='sine';o2.frequency.value=110.4;f.type='lowpass';f.frequency.value=180;g.gain.value=0;
@@ -413,7 +424,10 @@ let ri=0;if(!reduce)setInterval(()=>{ri=(ri+1)%ROLES.length;$('#roleBadge').text
 
 /* ======== MENU + LINKS ======== */
 const menu=$('#menu'),scrim=$('#scrim'),mb=$('#menuBtn');
-const setMenu=open=>{menu.hidden=!open;scrim.hidden=!open;mb.setAttribute('aria-expanded',open);mb.textContent=open?'CLOSE':'MENU';if(open)Snd.whoosh()};
+const setMenu=open=>{const was=!menu.hidden;menu.hidden=!open;scrim.hidden=!open;mb.setAttribute('aria-expanded',open);mb.textContent=open?'CLOSE':'MENU';
+  if(open){Snd.whoosh();setTimeout(()=>{const f=menu.querySelector('a,button');f&&f.focus()},60)}else if(was&&menu.contains(document.activeElement)){mb.focus()}};
+menu.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const f=[...menu.querySelectorAll('a,button')];const first=f[0],last=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();mb.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}});
 mb.addEventListener('click',()=>setMenu(menu.hidden));scrim.addEventListener('click',()=>setMenu(false));
 menu.querySelectorAll('[data-close]').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
 addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
@@ -458,7 +472,7 @@ const img=new Image();img.src='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAA
 const pc=$('#photo'),px=pc.getContext('2d');let samp=null,sw=0,sh=0;
 let mx=0,my=0,smx=0,smy=0;addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5},{passive:true});
 function sizePhoto(){const r={width:pc.offsetWidth,height:pc.offsetHeight},d=Math.min(2,devicePixelRatio||1);pc.width=r.width*d;pc.height=r.height*d;
-  if(!img.complete||!img.naturalWidth)return;const step=innerWidth<900?5:6;
+  if(!img.complete||!img.naturalWidth)return;const step=innerWidth<900?7:6;
   const sc=Math.max(r.width/img.naturalWidth,r.height/img.naturalHeight)*1.04;const dw=img.naturalWidth*sc,dh=img.naturalHeight*sc;
   sw=Math.floor(dw/step);sh=Math.floor(dh/step);const o=document.createElement('canvas');o.width=sw;o.height=sh;const ox=o.getContext('2d');ox.drawImage(img,0,0,sw,sh);
   const data=ox.getImageData(0,0,sw,sh).data,offx=(r.width-dw)*.55,offy=r.height*(innerWidth<900?.02:.07),fade=innerWidth<900?.12:.28;
@@ -467,7 +481,7 @@ function sizePhoto(){const r={width:pc.offsetWidth,height:pc.offsetHeight},d=Mat
 img.onload=()=>{sizePhoto();drawPhoto(0)};
 function drawPhoto(t){if(!samp)return;const d=Math.min(2,devicePixelRatio||1),r=pc.width/d,h=pc.height/d;px.setTransform(d,0,0,d,0,0);px.clearRect(0,0,r,h);
   const {pts}=samp;px.globalCompositeOperation='lighter';
-  const chans=[['#ff2a3a',-1.4+smx*-5],['#2aff6a',0],['#3a6bff',1.4+smx*5]];const fl=.94+.06*Math.sin(t*7),sh0=(t*14)|0;
+  const chans=innerWidth<900?[['#c9d3dc',0]]:[['#ff2a3a',-1.4+smx*-5],['#2aff6a',0],['#3a6bff',1.4+smx*5]];const fl=.94+.06*Math.sin(t*7),sh0=(t*14)|0;
   for(const [col,dx] of chans){px.fillStyle=col;px.beginPath();
     for(let k=0;k<pts.length;k+=4){const scan=(pts[k+3]+sh0)%4===0?.6:1;const rad=pts[k+2]*scan*fl;const X=pts[k]+dx+smx*-12,Y=pts[k+1]+smy*-8;px.moveTo(X+rad,Y);px.arc(X,Y,rad,0,6.283)}
     px.globalAlpha=.5;px.fill();px.globalAlpha=1}
@@ -494,7 +508,7 @@ document.querySelectorAll('[data-odo]').forEach(el=>{if(reduce)el.querySelectorA
 /* ======== WORK rail ======== */
 const rail=$('#rail'),wires=$('#wires');
 PROJECTS.forEach((p,i)=>{const a=document.createElement('article');a.className='proj '+(i%2?'lo':'hi');
-  a.innerHTML=`<div class="shot"><canvas data-art="${p.art}"></canvas><span class="badge">${p.k}</span></div><div class="meta"><h3>${p.t}</h3>${p.url?`<a class="visit mono" href="${p.url}" target="_blank" rel="noopener" data-snd>Visit ↗</a>`:''}</div><p>${p.d}</p>`;rail.appendChild(a)});
+  a.innerHTML=`<div class="shot"><canvas data-art="${p.art}" aria-hidden="true"></canvas><span class="badge">${p.k}</span></div><div class="meta"><h3>${p.t}</h3>${p.url?`<a class="visit mono" href="${p.url}" target="_blank" rel="noopener" data-snd>Visit ↗</a>`:`<span class="later mono">Details on request</span>`}</div><p>${p.d}</p>`;rail.appendChild(a)});
 const ART={
   swarm(x,w,h,t){for(let i=0;i<30;i++){const a=i*2.4+t*.5,r=(i%7+2)*h/20;const X=w/2+Math.cos(a)*r*1.5,Y=h/2+Math.sin(a*1.1)*r;x.fillStyle=i%6?'#7a2532':'#ff8f9c';x.fillRect(X-2,Y-2,i%6?4:7,i%6?4:7)}},
   chip(x,w,h){const s=Math.min(w,h)*.44;x.strokeStyle='#ff8f9c';x.lineWidth=2;x.strokeRect(w/2-s/2,h/2-s/2,s,s);x.strokeStyle='#7a2532';for(let i=0;i<8;i++){const o=-s/2+(i+.5)*s/8;[[0,-1],[0,1],[-1,0],[1,0]].forEach(([a,b])=>{x.beginPath();if(a===0){x.moveTo(w/2+o,h/2+b*s/2);x.lineTo(w/2+o,h/2+b*(s/2+22))}else{x.moveTo(w/2+a*s/2,h/2+o);x.lineTo(w/2+a*(s/2+22),h/2+o)}x.stroke()})}x.fillStyle='#ff8f9c';x.font='600 20px DM Mono, monospace';x.textAlign='center';x.fillText('RV32I',w/2,h/2+7)},
@@ -508,7 +522,7 @@ const ART={
 };
 let artCanvases=[];
 function sizeArt(){artCanvases=[...document.querySelectorAll('canvas[data-art]')].map(c=>{const r=c.getBoundingClientRect(),d=Math.min(2,devicePixelRatio||1);c.width=r.width*d;c.height=r.height*d;return{c,w:r.width,h:r.height,d}})}
-function drawArt(t){for(const a of artCanvases){const x=a.c.getContext('2d');x.setTransform(a.d,0,0,a.d,0,0);const g=x.createLinearGradient(0,0,0,a.h);g.addColorStop(0,'#0a0304');g.addColorStop(1,'#2e0a12');x.fillStyle=g;x.fillRect(0,0,a.w,a.h);ART[a.c.dataset.art](x,a.w,a.h,t)}}
+function drawArt(t,onlyVisible){for(const a of artCanvases){if(onlyVisible){const r=a.c.getBoundingClientRect();if(r.right<0||r.left>innerWidth||r.bottom<0||r.top>innerHeight)continue}const x=a.c.getContext('2d');x.setTransform(a.d,0,0,a.d,0,0);const g=x.createLinearGradient(0,0,0,a.h);g.addColorStop(0,'#0a0304');g.addColorStop(1,'#2e0a12');x.fillStyle=g;x.fillRect(0,0,a.w,a.h);ART[a.c.dataset.art](x,a.w,a.h,t)}}
 function sizeRail(){rail.querySelectorAll('.proj').forEach(e=>e.style.transform='');rail.style.transform='none';const ws=$('#work');const travel=Math.max(0,rail.scrollWidth-innerWidth+innerWidth*.08);ws.style.height=(innerHeight+travel)+'px';ws.dataset.travel=travel;
   // wires between cards
   const items=[...rail.children].filter(e=>e.tagName!=='svg');const rr=rail.getBoundingClientRect();let d='';
@@ -559,7 +573,8 @@ let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(layout,120)
 document.fonts&&document.fonts.ready.then(layout);layout();
 const vis=el=>{const r=el.getBoundingClientRect();return r.bottom>0&&r.top<innerHeight};
 let lastPh=0;function loop(ms){const t=ms/1000;frame();smx+=(mx-smx)*.08;smy+=(my-smy)*.08;
-  if(vis(pc)&&ms-lastPh>33){drawPhoto(t);lastPh=ms}if(vis($('#work')))drawArt(t);if(vis(sc)&&ms-glitchT<500)drawScreen(ms);requestAnimationFrame(loop)}
+  if(document.hidden){requestAnimationFrame(loop);return}
+  if(vis(pc)&&ms-lastPh>(innerWidth<900?50:33)){drawPhoto(t);lastPh=ms}if(vis($('#work')))drawArt(t,true);if(vis(sc)&&ms-glitchT<500)drawScreen(ms);requestAnimationFrame(loop)}
 if(!reduce)requestAnimationFrame(loop);else addEventListener('scroll',frame,{passive:true});
 </script>
 
