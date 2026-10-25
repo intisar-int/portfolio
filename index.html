@@ -208,7 +208,10 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
 .links a{display:inline-flex;align-items:center;min-height:44px;margin-block:-12px}
 .links a:hover{text-decoration:underline}
 .links .v{user-select:all}
-#wordmark{display:block;width:100%;height:clamp(110px,17vw,260px)}
+#wordmark,#wordmark2{display:block;width:100%;height:clamp(70px,9.5vw,150px);margin-top:24px}
+#wordmark2{display:none;margin-top:0}
+.punch{margin:8px 0 34px;text-align:center;color:var(--rose);padding-left:var(--gut);padding-right:var(--gutr)}
+@media (max-width:700px){#wordmark,#wordmark2{display:block;height:clamp(60px,17vw,90px)}}
 .footer .legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:6px;padding-bottom:calc(env(safe-area-inset-bottom,0px) + 18px);padding-left:var(--gut);padding-right:var(--gutr);color:#e9b8bf}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);transform:translate(-50%,20px);z-index:90;background:var(--ink);color:var(--hi);padding:10px 16px;opacity:0;transition:opacity .25s,transform .25s;pointer-events:none}
 .toast.show{opacity:1;transform:translate(-50%,0)}
@@ -355,7 +358,9 @@ body.on-lime .hud .menu-btn{background:#6c1421;border-color:#b4505f;color:var(--
       </div>
       <div class="links mono" id="footLinks"></div>
     </div>
-    <canvas id="wordmark" aria-label="Portfolio / Intisar"></canvas>
+    <canvas id="wordmark" role="img" aria-label="It worked in simulation"></canvas>
+    <canvas id="wordmark2" aria-hidden="true"></canvas>
+    <p class="punch mono">Real hardware is still thinking about it.</p>
     <div class="legal mono"><span>©2026 Intisar Ahmad</span><span>Built in Dhaka · BRAC University EEE</span></div>
   </footer>
 </main>
@@ -542,7 +547,8 @@ setJob(0);
 function drawScreen(now){const g=clamp(1-(now-glitchT)/450);dotText(sc,JOBS[jobIdx].o,{color:g>0?(Math.random()<.5?'#e2475c':'#f5f0eb'):'#e2475c',cell:6,fill:.7,glitch:g*.5,font:'600 100px Rajdhani, Arial Narrow, sans-serif'})}
 
 /* ======== FOOTER wordmark ======== */
-function drawWord(){dotText($('#wordmark'),'PORTFOLIO/INTISAR',{color:'#f5f0eb',cell:innerWidth<700?3:5,fill:.62,font:'500 100px Rajdhani, Arial Narrow, sans-serif'})}
+function drawWord(){const o={color:'#f5f0eb',cell:innerWidth<700?3:4,fill:.62,font:'500 100px Rajdhani, Arial Narrow, sans-serif'};
+  if(innerWidth<700){dotText($('#wordmark'),'IT WORKED',o);dotText($('#wordmark2'),'IN SIMULATION',o)}else dotText($('#wordmark'),'IT WORKED IN SIMULATION',o)}
 
 /* ======== SCROLL ENGINE (smoothed) ======== */
 const heroStage=$('#heroStage'),intro=$('#intro'),heroName=$('#heroName');let lastLime=null,lastWords=-1;
